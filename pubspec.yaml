@@ -1,0 +1,61 @@
+name: bego_soon
+description: "coming soon project for business ocean BEGO Project"
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.4 <4.0.0'
+
+dependencies:
+  be_widgets: ^1.0.2  
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.9
+  # https://github.com/Business-Ocean/bego_client/tree/main/packages/bego_ui  
+
+
+dev_dependencies:
+  build_runner:
+  flutter_gen_runner:
+  flutter_lints: ^3.0.1
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/  
+    - assets/svgs/  
+  
+
+
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    flutter_svg: true
+    flare_flutter: false
+    rive: false
+    lottie: false
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,18 @@
+  bego_core:
+    git:
+      url: git@github.com:Business-Ocean/bego_client.git
+      path: packages/bego_core
+      ref: main
+      private: true
+      auth:
+        github:
+          token:   
+  bego_ui:
+    git:
+      url: git@github.com:Business-Ocean/bego_client.git
+      path: packages/bego_ui
+      ref: main
+      private: true
+      auth:
+        github:
+          token:
