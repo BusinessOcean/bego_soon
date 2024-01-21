@@ -20,17 +20,32 @@ class _NavBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) => const Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            'Business Ocean',
-            style: titleStyle,
+          Expanded(
+            flex: 0,
+            child: Text(
+              'Business Ocean',
+              textAlign: TextAlign.start,
+              style: titleStyle,
+            ),
           ),
           Spacer(),
 
-          Icon(Icons.location_on),
-          Text(
-            'COMING SOON!',
-            style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
+          Icon(
+            Icons.location_on,
+            color: Colors.grey,
+          ),
+          Expanded(
+            flex: 0,
+            child: Text(
+              'COMING SOON!',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Colors.grey,
+              ),
+            ),
           ),
           // SizedBox(width: 14),
           // Icon(Icons.link),

@@ -58,6 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             const AboutUsTile().paddingXL,
             const SubscriptionEmail().paddingXL,
+
+            // ),
           ],
         ),
       );

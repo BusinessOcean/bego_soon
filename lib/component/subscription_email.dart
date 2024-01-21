@@ -10,8 +10,8 @@ class SubscriptionEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const br = BorderRadius.only(topRight: Radius.circular(200));
-    return SizedBox(
-      height: 300,
+    return Container(
+      constraints: const BoxConstraints.tightForFinite(height: 350),
       child: Padding(
         padding: const EdgeInsets.only(
           right: 32,
@@ -26,11 +26,13 @@ class SubscriptionEmail extends StatelessWidget {
           ),
           child: const Row(
             children: [
-              Expanded(flex: 4, child: SubscriptionContent()),
-              Spacer(),
+              Expanded(flex: 1, child: SubscriptionContent()),
               Expanded(
-                flex: 0,
-                child: BusinessOceanLogo(),
+                flex: 1,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: BusinessOceanLogo(),
+                ),
               ),
             ],
           ),
@@ -70,19 +72,24 @@ class SubscriptionContent extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 32),
-          BeLabel(
-            innerLabel: true,
-            offset: const Offset(-4, 0),
-            position: BeLabelPosition.rightCenter,
-            label: ElevatedButton(
-              onPressed: () {},
-              style: buttonStyle,
-              child: const Text('I am waiting'),
-            ),
-            child: const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
+          Center(
+            child: Container(
+              constraints: const BoxConstraints.tightForFinite(width: 450),
+              child: BeLabel(
+                innerLabel: true,
+                offset: const Offset(-4, 0),
+                position: BeLabelPosition.rightCenter,
+                label: ElevatedButton(
+                  onPressed: () {},
+                  style: buttonStyle,
+                  child: const Text('I am waiting'),
+                ),
+                child: const TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                    ),
+                  ),
                 ),
               ),
             ),

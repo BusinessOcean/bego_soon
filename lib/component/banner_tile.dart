@@ -13,7 +13,6 @@ class BannerTile extends StatelessWidget {
             flex: 6,
             child: BannerContent(),
           ),
-          Spacer(),
           Expanded(
             flex: 4,
             child: BannerIllustration(),
